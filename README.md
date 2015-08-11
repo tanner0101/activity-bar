@@ -5,15 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/ActivityBar.svg?style=flat)](http://cocoapods.org/pods/ActivityBar)
 [![Platform](https://img.shields.io/cocoapods/p/ActivityBar.svg?style=flat)](http://cocoapods.org/pods/ActivityBar)
 
+An iMessage UIProgressBar-style view for showing ogoing activity.
+
 ![ActivityBar Animation](http://tanner.xyz/activity-bar/activity-bar.gif)
 
-## Usage
+## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-UIKit
 
 ## Installation
 
