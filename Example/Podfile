@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ActivityBar_Example', :exclusive => true do
+  pod "ActivityBar", :path => "../"
+end
+
+target 'ActivityBar_Tests', :exclusive => true do
+  pod "ActivityBar", :path => "../"
+
+  
+end
