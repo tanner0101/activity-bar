@@ -1,0 +1,14 @@
+PODS:
+  - ActivityBar (0.1.0)
+
+DEPENDENCIES:
+  - ActivityBar (from `../`)
+
+EXTERNAL SOURCES:
+  ActivityBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ActivityBar: 50b5baf08d82c64cf076643fcb661b3b11d040fc
+
+COCOAPODS: 0.38.2

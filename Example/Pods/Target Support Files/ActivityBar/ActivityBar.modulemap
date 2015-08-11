@@ -1,0 +1,6 @@
+framework module ActivityBar {
+  umbrella header "ActivityBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

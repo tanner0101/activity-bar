@@ -1,0 +1,25 @@
+{
+  "name": "ActivityBar",
+  "version": "0.1.0",
+  "summary": "A short description of ActivityBar.",
+  "description": "An optional longer description of ActivityBar\n\n* Markdown format.\n* Don't worry about the indent, we strip it!",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/ActivityBar",
+  "license": "MIT",
+  "authors": {
+    "Tanner Nelson": "tanner@bluebite.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/ActivityBar.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "ActivityBar": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
