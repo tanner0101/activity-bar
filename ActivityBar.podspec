@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ActivityBar"
-  s.version          = "1.0.1"
+  s.version          = "1.0.2"
   s.summary          = "An iMessage UIProgressBar-style view for showing ogoing activity"
   s.description      = "Inspired by the UIProgressBar seen throughout iOS and especially in messages, this simple view displays ongoing activity. Customize color and start/stop the animation at any time."
   s.homepage         = "https://github.com/tannernelson/ActivityBar"
