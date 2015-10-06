@@ -17,7 +17,7 @@ public class ActivityBar: UIView {
         super.awakeFromNib()
         
         self.bar.backgroundColor = self.color
-        self.bar.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.bar.translatesAutoresizingMaskIntoConstraints = false
         
         self.addSubview(self.bar)
         
@@ -53,12 +53,12 @@ public class ActivityBar: UIView {
         }
         self.layoutIfNeeded()
         
-        UIView.animateWithDuration(self.duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: nil, animations: {
+        UIView.animateWithDuration(self.duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: {
             toZero.constant = 0
             self.layoutIfNeeded()
             }, completion: nil)
         
-        UIView.animateWithDuration(self.duration * 0.7, delay: self.duration * 0.3, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: nil, animations: {
+        UIView.animateWithDuration(self.duration * 0.7, delay: self.duration * 0.3, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: {
             toWidth.constant = self.frame.size.width
             self.layoutIfNeeded()
             }, completion:nil)
@@ -92,7 +92,7 @@ public class ActivityBar: UIView {
     
     //MARK: Class
     public class func addTo(viewController: UIViewController) -> ActivityBar {
-        var activityBar = ActivityBar()
+        let activityBar = ActivityBar()
         
         activityBar.alpha = 0.8
         
@@ -111,7 +111,7 @@ public class ActivityBar: UIView {
             xLayout = NSLayoutConstraint(item: activityBar, attribute: .Top, relatedBy: .Equal, toItem: view, attribute: .Top, multiplier: 1, constant: topOffset)
         }
         
-        activityBar.setTranslatesAutoresizingMaskIntoConstraints(false)
+        activityBar.translatesAutoresizingMaskIntoConstraints = false
         activityBar.hidden = true
         
         view.addSubview(activityBar)
