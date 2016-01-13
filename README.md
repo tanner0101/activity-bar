@@ -25,6 +25,7 @@ pod "ActivityBar"
 ## Getting Started
 
 Add the ActivityBar to your view controller.
+
 ```swift
 import UIKit
 import ActivityBar
@@ -53,12 +54,29 @@ self.activityBar.color = UIColor.greenColor()
 ```
 
 ### Animation
-Start and stop the ActivityBar loading
+Start and stop the ActivityBar's indefinite animation.
 
 ```swift
 self.activityBar.start()
 self.activityBar.stop()
 ```
+
+### Progress
+Set the ActivityBar to display progress between 0% and 100%. 
+
+```swift
+//displays the ActivityBar and animates to 75%
+self.activityBar.progress = 0.75
+```
+
+The ActivityBar will animate between different states of progress. To hide the ActivityBar, set the progress property to `nil`. 
+
+```swift
+//hides the ActivityBar
+self.activityBar.progress = nil
+```
+
+Note: You can call `start()` at any point without first setting `progress` to `nil`.
 
 ## Author
 
