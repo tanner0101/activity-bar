@@ -56,23 +56,67 @@ public class ActivityBar: UIView {
         UIView.animateWithDuration(self.duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: {
             toZero.constant = 0
             self.layoutIfNeeded()
-            }, completion: nil)
+        }, completion: nil)
         
         UIView.animateWithDuration(self.duration * 0.7, delay: self.duration * 0.3, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: {
             toWidth.constant = self.frame.size.width
             self.layoutIfNeeded()
-            }, completion:nil)
+        }, completion:nil)
         
     }
     
     
     //MARK: Public
+    
+    /**
+        Set the ActivityBar to a fixed progress.
+    
+        Valid values are between 0.0 and 1.0.
+    
+        The progress will be `nil` if the bar is currently animating.
+    */
+    public var progress: Float? {
+        didSet {
+            if self.progress != nil {
+                self.stop()
+                self.hidden = false
+            } else {
+                self.hidden = true
+            }
+            
+            if self.progress > 1.0 {
+                self.progress = 1.0
+            } else if self.progress < 0 {
+                self.progress = 0
+            }
+            
+            if let progress = self.progress {
+                UIView.animateWithDuration(self.duration, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: {
+                    self.barLeft.constant = 0
+                    self.barRight.constant = self.frame.size.width - (CGFloat(progress) * self.frame.size.width)
+                    self.layoutIfNeeded()
+                }, completion: nil)
+            }
+            
+        }
+    }
+    
+    /**
+         The tint color of the ActivityBar.
+         
+         Defaults to the parent UIView's tint color.
+     */
     public var color = UIColor.blackColor() {
         didSet {
             self.bar.backgroundColor = self.color
         }
     }
     
+    /**
+        Starts animating the ActivityBar.
+    
+        Call `.stop()` to stop.
+    */
     public func start() {
         self.stop()
         
@@ -85,12 +129,23 @@ public class ActivityBar: UIView {
         self.animate()
     }
     
+    /**
+         Stops animating the ActivityBar.
+     
+         Call `.start()` to start.
+     */
     public func stop() {
         self.animationTimer?.invalidate()
         self.animationTimer = nil
     }
     
     //MARK: Class
+    
+    /**
+        Adds an ActivityBar to the supplied view controller.
+    
+        The added ActivityBar is returned.
+    */
     public class func addTo(viewController: UIViewController) -> ActivityBar {
         let activityBar = ActivityBar()
         

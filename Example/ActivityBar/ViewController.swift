@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     //MARK: Interface
     var activityBar: ActivityBar!
+    @IBOutlet weak var slider: UISlider!
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -32,6 +33,10 @@ class ViewController: UIViewController {
         //Start and stop the ActivityBar loading
         
         //self.activityBar.start()
+    }
+    @IBAction func sliderChanged(sender: AnyObject) {
+        //set the progress somewhere between 0 and 1
+        self.activityBar.progress = self.slider.value
     }
 
     @IBAction func stopButtonPressed(sender: AnyObject) {

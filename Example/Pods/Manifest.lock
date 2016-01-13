@@ -1,5 +1,5 @@
 PODS:
-  - ActivityBar (0.1.0)
+  - ActivityBar (1.0.2)
 
 DEPENDENCIES:
   - ActivityBar (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ActivityBar: 50b5baf08d82c64cf076643fcb661b3b11d040fc
+  ActivityBar: 6a0a96bf276ddac3d7eb5e22bf5a3267cd4fa522
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
