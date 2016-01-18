@@ -62,7 +62,6 @@ public class ActivityBar: UIView {
             toWidth.constant = self.frame.size.width
             self.layoutIfNeeded()
         }, completion:nil)
-        
     }
     
     
