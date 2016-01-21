@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.summary          = "An iMessage UIProgressBar-style view for showing ogoing activity"
   s.description      = "Inspired by the UIProgressBar seen throughout iOS and especially in messages, this simple view displays ongoing activity. Customize color and start/stop the animation at any time."
   s.homepage         = "https://github.com/tannernelson/activity-bar"
-  s.screenshots     = "http://tanner.xyz/activity-bar/activity-bar.gif"
+  s.screenshots      = "https://cloud.githubusercontent.com/assets/1342803/12491558/c7e82b1a-c049-11e5-9dd6-a4ff185d32c6.gif"
   s.license          = 'MIT'
   s.author           = { "Tanner Nelson" => "tanner@bluebite.com" }
   s.source           = { :git => "https://github.com/tannernelson/activity-bar.git", :tag => s.version.to_s }

@@ -7,7 +7,7 @@
 
 An iMessage UIProgressBar-style view for showing ogoing activity.
 
-![ActivityBar Animation](http://tanner.xyz/activity-bar/activity-bar.gif)
+![ActivityBar Animation](https://cloud.githubusercontent.com/assets/1342803/12491558/c7e82b1a-c049-11e5-9dd6-a4ff185d32c6.gif)
 
 ## Example
 
